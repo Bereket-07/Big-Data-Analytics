@@ -1,3 +1,163 @@
-# install the requirement file
-- 1 : create a requirement file and add the packeages i mentioned in the requiremnt file
-- then runt the ` pip install -r requirements.txt`
+# 🗺️ Big Data Analysis using power BI
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Folder Organization](#folder-organization)
+- [Setup](#setup)
+- [Notes](#notes)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview: Key Functionalities
+
+
+## Project Overview
+
+The project is an AI assistant for a learning management system (LMS). It is designed to assist students, teachers, and prospective users. The AI assistant will support different use cases:
+- **Students**: The AI will help with course recommendations and other related topics.
+- **Teachers**: The AI will assist with general questions and tasks, including querying the number of student enrollments in specific courses.
+The project will query a MySQL database when necessary and will also have access to a vector database.
+
+# Tools & Libraries Used
+
+1. **Programming Language**: [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=yellow)](https://www.python.org/)
+2. **Logging**: [![Logger](https://img.shields.io/badge/Logging-4B8BBE?style=flat&logo=python&logoColor=yellow)](https://docs.python.org/3/howto/logging.html)
+3. **AI Tool**: [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)](https://www.openai.com/)
+4. **Database**: [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)](https://www.mysql.com/)
+5. **Web Framework**: [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+6. **Version Control**: [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)| [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/)
+7. **Code Formatting & Linting**: [![Black](https://img.shields.io/badge/Black-000000?style=flat&logo=python&logoColor=white)](https://github.com/psf/black)
+8. **Continuous Integration (CI)**: [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+9. **Environment Management**: [![Pip](https://img.shields.io/badge/Pip-005A8B?style=flat&logo=pypi&logoColor=white)](https://pip.pypa.io/en/stable/)
+## Folder Organization
+
+```
+
+📁.github
+└──
+    └── 📁workflows
+         └── 📃unittests.yml
+└── 📁app
+         └── 📁api
+         └── 📁config
+         └── 📁db
+         └── 📁models
+         └── 📁schemas
+         └── 📁services
+         └── 📁utils
+         └── 📃__init__.py
+         └── 📃main.py
+└── ⌛tests
+         └── 📃__init__.py
+
+└── 📜.gitignore
+└── 📰README.md
+└── 🔋requirements.txt
+└── 📇templates.py
+
+```
+
+
+### **Usage**
+
+This project is designed to facilitate interactions with the AI assistant and includes functionalities for both students and teachers. Below are details on how to use the different modules.
+
+- **💻 `app`**: The main source code for the application.
+  
+  - **📁 `api`**: Contains route handlers for the API.
+    - **📝 `chat_with.py`**: Endpoints for chat interactions.
+    - **📝 `routes.py`**: General API routes.
+    - **📝 `student_routes.py`**: Routes specific to student functionalities.
+  
+  - **📁 `schemas`**: Contains Pydantic model schemas.
+    - **📝 `user_message.py`**: Schema for user messaging.
+  
+  - **📁 `services`**: Service layer handling business logic.
+    - **📝 `student_promptAssigner.py`**: Logic for assigning prompts to students.
+    - **📝 `teacher_promptAssigner.py`**: Logic for assigning prompts to teachers.
+    
+  - **📝 `main.py`**: Entry point for the application.
+
+- **⌛ `tests`**: Directory for test files, including unit and integration tests.
+  
+  - **📝 `__init__.py`**: Initialization file for the test module.
+
+- **📜 `.gitignore`**: Specifies files and directories to be ignored by Git.
+
+- **📰 `README.md`**: Main documentation for the project.
+
+- **🔋 `requirements.txt`**: Lists Python dependencies required to run the project.
+
+### Running the Application
+
+1. **Clone the Repository**
+
+    ```bash
+    git clone https://github.com/Bereket-07/PENNMAX-LMS-ChatBot.git 
+    ```
+
+2. **Change Directory to Project**
+
+    ```bash
+    cd PENNMAX
+    ```
+
+3. **Install Dependencies**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the Application**
+
+    ```bash
+    uvicorn app.main:app --reload
+    ```
+
+    By running this command, the FastAPI app will start, and you can interact with the API.
+
+5. **Access the Documentation**
+
+    Navigate to `http://127.0.0.1:8000/docs` to interact with the API documentation generated by FastAPI.
+
+
+### How to Contribute
+
+1. **Fork the repository**: Click the "Fork" button at the top right of this page to create your own copy of the repository.
+2. **Clone your fork**: Clone the forked repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   ```
+3. **Create a new branch**: Create a new branch for your feature or bugfix.
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+4. **Make your changes**: Implement your feature or fix the bug. Ensure your code adheres to the project's coding standards and style.
+5. **Commit your changes**: Commit your changes with a descriptive message.
+   ```bash
+   git add .
+   git commit -m 'Add new feature or fix bug'
+   ```
+6. **Push your branch**: Push your branch to your forked repository.
+   ```bash
+   git push origin feature/your-feature
+   ```
+7. **Create a Pull Request**: Go to the repository on GitHub, switch to your branch, and click the `New Pull Request` button. Provide a detailed description of your changes and submit the pull request.
+
+## Additional Information
+
+- **Bug Reports**: If you find a bug, please open an issue in the repository with details about the problem.
+
+- **Feature Requests**: If you have ideas for new features, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License
+
+### Summary
+
+The MIT License is a permissive free software license originating at the Massachusetts Institute of Technology (MIT). It is a simple and easy-to-understand license that places very few restrictions on reuse, making it a popular choice for open source projects.
+
+By using this project, you agree to include the original copyright notice and permission notice in any copies or substantial portions of the software.
