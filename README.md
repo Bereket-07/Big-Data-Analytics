@@ -12,7 +12,8 @@
 
 ## Overview: Key Functionalities
 
-
+This project implements a complete ETL (Extract, Transform, Load) pipeline for e-commerce data analysis. It integrates structured and unstructured data sources to derive meaningful insights, demonstrating the fundamentals of Big Data Analytics and Business Intelligence (BI).
+![img.png](img.png)
 ## Project Overview
 ### Key Features:
 
